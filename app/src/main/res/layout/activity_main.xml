@@ -20,4 +20,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="修复" />
+
+    <Button
+        android:id="@+id/btn_anim_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="动画"/>
 </LinearLayout>

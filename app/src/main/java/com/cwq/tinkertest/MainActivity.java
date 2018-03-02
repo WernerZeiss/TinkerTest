@@ -15,6 +15,7 @@ import com.tencent.tinker.lib.tinker.TinkerInstaller;
 public class MainActivity extends AppCompatActivity {
     TextView tv_msg;
     Button btn_fix;
+    Button btn_anim_test;
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         tv_msg = findViewById(R.id.tv_message);
         btn_fix = findViewById(R.id.btn_fix);
+        btn_anim_test = findViewById(R.id.btn_anim_test);
 
         tv_msg.setText("这是修改后的的的的的的带的的文字");
         btn_fix.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
                     TinkerInstaller.onReceiveUpgradePatch(getApplicationContext(),
                             Environment.getExternalStorageDirectory().getAbsolutePath() + "/patch_signed.apk");
                 }
+            }
+        });
+
+
+        btn_anim_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AnimationHelper.start(view);
             }
         });
     }
